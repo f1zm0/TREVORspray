@@ -52,6 +52,7 @@ def main():
     advanced_group.add_argument('--ignore-lockouts', action='store_true', help='Forces the spray to continue and not stop when multiple account lockouts are detected')
     advanced_group.add_argument('--timeout', type=float, default=10, help='Connection timeout in seconds (default: 10)')
     advanced_group.add_argument('--random-useragent', action='store_true', help='Add a random value to the User-Agent for each request')
+    advanced_group.add_argument('--random-users', action='store_true', help='Randomize entries in users list at each run')
     advanced_group.add_argument('-6', '--prefer-ipv6', action='store_true', help='Prefer IPv6 over IPv4')
     advanced_group.add_argument('--proxy', help='Proxy to use for HTTP and HTTPS requests')
     advanced_group.add_argument('-v', '--verbose', '--debug', action='store_true', help='Show which proxy is being used for each request')

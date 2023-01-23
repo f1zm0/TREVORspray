@@ -3,6 +3,7 @@ import time
 import logging
 import importlib
 import threading
+from random import shuffle
 from . import util
 from . import sprayers
 from pathlib import Path
@@ -152,6 +153,9 @@ class TrevorSpray:
             return
 
         for password in ([None] if enumerate_users else self.options.passwords):
+            if self.options.random_users:
+                shuffle(self.options.users)
+
             for user in self.options.users:
                 accepted = False
                 while not accepted and not self._stop:
