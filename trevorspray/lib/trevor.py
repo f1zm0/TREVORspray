@@ -153,7 +153,7 @@ class TrevorSpray:
             return
 
         for password in ([None] if enumerate_users else self.options.passwords):
-            if self.options.random_users:
+            if self.options.shuffle_users:
                 shuffle(self.options.users)
 
             for user in self.options.users:
